@@ -43,7 +43,7 @@
             this.buttonClear = new System.Windows.Forms.Button();
             this.textBoxByNIM = new System.Windows.Forms.TextBox();
             this.buttonCari = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelJumlah = new System.Windows.Forms.Label();
             this.buttonJumlahData = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtMahasiswa)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +56,7 @@
             this.dtMahasiswa.RowTemplate.Height = 24;
             this.dtMahasiswa.Size = new System.Drawing.Size(795, 167);
             this.dtMahasiswa.TabIndex = 0;
+            this.dtMahasiswa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtMahasiswa_CellClick);
             // 
             // label1
             // 
@@ -129,7 +130,7 @@
             this.buttonSimpan.TabIndex = 9;
             this.buttonSimpan.Text = "Simpan";
             this.buttonSimpan.UseVisualStyleBackColor = true;
-            this.buttonSimpan.Click += new System.EventHandler(this.buttonSImpan_Click);
+            this.buttonSimpan.Click += new System.EventHandler(this.buttonSimpan_Click);
             // 
             // buttonUpdate
             // 
@@ -139,6 +140,7 @@
             this.buttonUpdate.TabIndex = 10;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 
@@ -148,6 +150,7 @@
             this.buttonDelete.TabIndex = 11;
             this.buttonDelete.Text = "Delete";
             this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
             // 
             // buttonClear
             // 
@@ -157,6 +160,7 @@
             this.buttonClear.TabIndex = 12;
             this.buttonClear.Text = "Clear";
             this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
             // 
             // textBoxByNIM
             // 
@@ -173,15 +177,16 @@
             this.buttonCari.TabIndex = 14;
             this.buttonCari.Text = "Cari";
             this.buttonCari.UseVisualStyleBackColor = true;
+            this.buttonCari.Click += new System.EventHandler(this.buttonCari_Click);
             // 
-            // label5
+            // labelJumlah
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(548, 110);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(16, 17);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "0";
+            this.labelJumlah.AutoSize = true;
+            this.labelJumlah.Location = new System.Drawing.Point(548, 110);
+            this.labelJumlah.Name = "labelJumlah";
+            this.labelJumlah.Size = new System.Drawing.Size(16, 17);
+            this.labelJumlah.TabIndex = 15;
+            this.labelJumlah.Text = "0";
             // 
             // buttonJumlahData
             // 
@@ -191,6 +196,7 @@
             this.buttonJumlahData.TabIndex = 16;
             this.buttonJumlahData.Text = "Jumlah Data";
             this.buttonJumlahData.UseVisualStyleBackColor = true;
+            this.buttonJumlahData.Click += new System.EventHandler(this.buttonJumlahData_Click);
             // 
             // Form1
             // 
@@ -198,7 +204,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.buttonJumlahData);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelJumlah);
             this.Controls.Add(this.buttonCari);
             this.Controls.Add(this.textBoxByNIM);
             this.Controls.Add(this.buttonClear);
@@ -239,7 +245,7 @@
         private System.Windows.Forms.Button buttonClear;
         private System.Windows.Forms.TextBox textBoxByNIM;
         private System.Windows.Forms.Button buttonCari;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelJumlah;
         private System.Windows.Forms.Button buttonJumlahData;
     }
 }
